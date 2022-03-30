@@ -9,7 +9,7 @@ class FlightSearch:
         self.response = {}
         self.cheapest_flight_dict = {}
         self.cheapest_price = 0
-        self.header = {"apikey": "nWMGpmxu-M_2MoIcw7hqygT8OPF7t5r1"}
+        self.header = {"apikey": "[API-KEY]"}
         self.search_response = {}
         # sets the minimum and maximum length of stay
         self.nights_in_dst_from = 7
