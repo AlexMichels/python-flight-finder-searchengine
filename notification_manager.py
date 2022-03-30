@@ -5,8 +5,8 @@ import smtplib
 class NotificationManager:
     #This class is responsible for sending notifications with the deal flight details.
     def __init__(self):
-        self.account_sid = "AC1a990dd8d10da0dbada86fdb09ae0190"
-        self.auth_token = "5d9194ee5744cc9befaa59e7b9167138"
+        self.account_sid = "[API-KEY]0"
+        self.auth_token = "[API-KEY]8"
 
 
     def send_notification(self,flightdata:dict, subs_sheet):
@@ -43,10 +43,10 @@ class NotificationManager:
             from_="+17655713110",
             to="+4915162505755")
         print(flightdata)
-        my_email = "pythonfuture1@gmail.com"
+        my_email = "email"
         with smtplib.SMTP("smtp.gmail.com:587") as connection:
             connection.starttls()
-            connection.login(user=my_email, password="Nokia1993!")
+            connection.login(user=my_email, password="password")
             for entry in subs_sheet:
                 connection.sendmail(from_addr=my_email, to_addrs=entry["email"],
                                     msg=f"Subject:Price Alert \n\n{flightdata['cityFrom']}-{flightdata['flyFrom']} to {flightdata['cityTo']}" \
